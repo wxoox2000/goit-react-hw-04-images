@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const animModeOverlay = p => {
-  switch(p.children.props.closing) {
+  switch(p.children.props.$closing) {
     case false:
       return 'popUp 350ms ease 1 alternate forwards';
     case true:
@@ -12,7 +12,7 @@ const animModeOverlay = p => {
 }
 
 const animModeModal = p => {
-  switch(p.children.props.closing) {
+  switch(p.children.props.$closing) {
     case false:
       return 'popUpImg 350ms 350ms ease 1 alternate backwards';
     case true:
