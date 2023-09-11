@@ -1,16 +1,14 @@
-import { Component } from 'react';
 import { Btn, Head, Query, SearchForm } from './Searchbar.styled';
 import { BsSearch } from 'react-icons/bs';
 import { Formik } from 'formik';
 
-export class Searchbar extends Component {
-  render() {
+export const Searchbar = ({searchQuery}) => {
     return (
       <Head>
         <Formik
           initialValues={{ query: '' }}
           onSubmit={val => {
-            this.props.searchQuery(val)
+            searchQuery(val)
           }}
         >
           <SearchForm>
@@ -29,5 +27,4 @@ export class Searchbar extends Component {
         </Formik>
       </Head>
     );
-  }
 }
